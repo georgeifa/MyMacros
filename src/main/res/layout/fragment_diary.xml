@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DiaryFragment"
+    android:background="@color/blue">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/general_frame_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/day_dairy_TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/today"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/next_day_diary_BTN"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_forward_available"
+                app:layout_constraintBottom_toBottomOf="@+id/day_dairy_TXT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/day_dairy_TXT"
+                app:layout_constraintTop_toTopOf="@+id/day_dairy_TXT"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/prev_day_diary_BTN"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_back_white"
+                app:layout_constraintBottom_toBottomOf="@+id/day_dairy_TXT"
+                app:layout_constraintEnd_toStartOf="@+id/day_dairy_TXT"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/day_dairy_TXT"
+                tools:ignore="ContentDescription" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@+id/day_dairy_TXT">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/calories_diary_PB"
+                        android:layout_width="203dp"
+                        android:layout_height="202dp"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/pb_circle_style"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:progress="90" />
+
+                    <TextView
+                        android:id="@+id/calories_diary_TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/_1260"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/calories_diary_PB"
+                        app:layout_constraintEnd_toEndOf="@+id/calories_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/calories_diary_PB"
+                        app:layout_constraintTop_toTopOf="@+id/calories_diary_PB"
+                        app:layout_constraintVertical_bias="0.44" />
+
+                    <TextView
+                        android:id="@+id/kcal_left_diary_TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/kcal_left"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/calories_diary_PB"
+                        app:layout_constraintEnd_toEndOf="@+id/calories_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/calories_diary_PB"
+                        app:layout_constraintTop_toBottomOf="@+id/calories_diary_TXT"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/eaten_kcals_diary_TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/_0"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:ellipsize="end"
+                        app:layout_constraintBottom_toBottomOf="@+id/calories_diary_PB"
+                        app:layout_constraintEnd_toStartOf="@+id/calories_diary_PB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/calories_diary_PB" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eaten"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@+id/eaten_kcals_diary_TXT"
+                        app:layout_constraintStart_toStartOf="@+id/eaten_kcals_diary_TXT"
+                        app:layout_constraintTop_toBottomOf="@+id/eaten_kcals_diary_TXT" />
+
+                    <TextView
+                        android:id="@+id/burnt_kcals_diary_TXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/_0"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/calories_diary_PB"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/calories_diary_PB"
+                        app:layout_constraintTop_toTopOf="@+id/calories_diary_PB" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/burnt"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@+id/burnt_kcals_diary_TXT"
+                        app:layout_constraintStart_toStartOf="@+id/burnt_kcals_diary_TXT"
+                        app:layout_constraintTop_toBottomOf="@+id/burnt_kcals_diary_TXT" />
+
+
+                    <ProgressBar
+                        android:id="@+id/prot_diary_PB"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:indeterminateOnly="false"
+
+                        android:progressDrawable="@drawable/pb_circle_style"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12"
+                        tools:progress="90" />
+
+                    <ProgressBar
+                        android:id="@+id/carbs_diary_PB"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/pb_circle_style"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/prot_diary_PB"
+                        app:layout_constraintEnd_toStartOf="@+id/prot_diary_PB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/prot_diary_PB"
+                        tools:progress="90" />
+
+                    <ProgressBar
+                        android:id="@+id/fat_diary_PB"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/pb_circle_style"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/prot_diary_PB"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/prot_diary_PB"
+                        app:layout_constraintTop_toTopOf="@+id/prot_diary_PB"
+                        tools:progress="90" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/protein"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@+id/prot_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/prot_diary_PB"
+                        app:layout_constraintTop_toBottomOf="@+id/calories_diary_PB" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/carbs"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                        app:layout_constraintEnd_toEndOf="@+id/carbs_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/carbs_diary_PB"
+                        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/fat"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                        app:layout_constraintEnd_toEndOf="@+id/fat_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/fat_diary_PB"
+                        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="@+id/carbs_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/carbs_diary_PB"
+                        app:layout_constraintTop_toBottomOf="@+id/carbs_diary_PB">
+
+                        <TextView
+                            android:id="@+id/carbs_taken_diary_TXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/_0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="/"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/carbs_needed_diary_TXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="@string/_180"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="@string/gr"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/fat_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/fat_diary_PB"
+                        app:layout_constraintTop_toBottomOf="@+id/fat_diary_PB">
+
+                        <TextView
+                            android:id="@+id/fat_taken_diary_TXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/_0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="/"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/fat_needed_diary_TXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="@string/_180"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="@string/gr"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="@+id/prot_diary_PB"
+                        app:layout_constraintStart_toStartOf="@+id/prot_diary_PB"
+                        app:layout_constraintTop_toBottomOf="@+id/prot_diary_PB">
+
+                        <TextView
+                            android:id="@+id/protein_taken_diary_TXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/_0"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="/"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/protein_needed_diary_TXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="@string/_180"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_bold"
+
+                            android:text="@string/gr"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/actions_diary_RVIEW"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

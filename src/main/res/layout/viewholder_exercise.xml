@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="150dp"
+    android:background="@drawable/general_frame_bg"
+    android:layout_marginEnd="8dp">
+
+    <TextView
+        android:id="@+id/title_view_exe_TXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/exercise_title"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/category_view_exe_TXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/category"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_view_exe_TXT"  />
+
+    <ImageView
+        android:id="@+id/add_view_exe_BTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_add_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_view_exe_TXT"
+        app:srcCompat="@drawable/ic_add"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="350dp"
+    android:background="@drawable/general_frame_bg">
+
+    <TextView
+        android:id="@+id/textView30_add_food_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/add_new_food"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/title_add_food_dialog_ETXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_style"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="@string/food_title"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLength="50"
+        android:minWidth="200dp"
+        android:minHeight="48dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="#9F9F9F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30_add_food_dial"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5_fDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/title_add_food_dialog_ETXT"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/title_add_food_dialog_ETXT"
+        app:layout_constraintTop_toBottomOf="@+id/title_add_food_dialog_ETXT">
+
+        <TextView
+            android:id="@+id/character_title_written_dialog_add_food_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/_0"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/_50"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5_fDialog">
+
+        <EditText
+            android:id="@+id/protein_add_food_dialog_ETXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="@string/protein_small"
+            android:paddingVertical="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="#9F9F9F"
+            android:textSize="22sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:maxLength="4"
+            android:minHeight="48dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="number"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/carb_add_food_dialog_ETXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:hint="@string/carbs_small"
+            android:paddingVertical="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="#9F9F9F"
+            android:textSize="22sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:maxLength="4"
+            android:background="@drawable/edit_text_style"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/fat_add_food_dialog_ETXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_style"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:hint="@string/fat_small"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="4"
+            android:minHeight="48dp"
+            android:paddingVertical="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#9F9F9F"
+            android:textSize="22sp"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/calories_add_food_ETXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_style"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="@string/calories_per_100g"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="5"
+        android:minWidth="200dp"
+        android:minHeight="48dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="#9F9F9F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calories_add_food_ETXT">
+
+        <TextView
+            android:id="@+id/add_dialog_add_food_BTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_style"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/add"
+            android:textColor="@color/green"
+            android:textSize="25sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/cancel_add_food_BTN"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_idle_bg_red_style"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/cancel"
+            android:textColor="@color/red"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

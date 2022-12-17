@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.QuizActivity"
+    android:background="#25273e">
+
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+
+
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_user_quiz_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:fontFamily="@font/nunito_bold"
+        android:text="Georgeifa"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/textview2"
+        app:layout_constraintStart_toEndOf="@+id/textview2"
+        app:layout_constraintTop_toTopOf="@+id/textview2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/welcome_message"
+        android:textColor="@color/white"
+
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/fill_the_quiz"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ScrollView
+        android:id="@+id/scrollview_quiz"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="16dp"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/firstname_quiz_ETXT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginEnd="5dp"
+
+                    android:hint="@string/first_name"
+                    android:inputType="textPersonName"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+                    android:fontFamily="@font/nunito_regular"
+
+                    android:textSize="21sp"
+                    android:importantForAutofill="no"
+                    tools:ignore="TextContrastCheck" />
+
+                <EditText
+                    android:id="@+id/lastname_quiz_ETXT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+
+                    android:hint="@string/last_name"
+                    android:inputType="textPersonName"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+                    android:fontFamily="@font/nunito_regular"
+
+                    android:textSize="21sp"
+                    android:importantForAutofill="no"
+                    tools:ignore="TextContrastCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/gender_quiz_toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit_text_style"
+                    android:checkedButton="@+id/male_quiz_SWT"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male_quiz_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="Male"
+                        android:gravity="center"
+                        android:text="@string/male"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/female_quiz_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="Female"
+                        android:gravity="center"
+                        android:text="@string/female"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/age_quiz_ETXT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/age"
+                    android:inputType="number"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+                    android:fontFamily="@font/nunito_regular"
+
+                    android:textSize="21sp"
+                    android:importantForAutofill="no"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/weight_quiz_ETXT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:drawableEnd="@drawable/ic_kg"
+                    android:drawablePadding="5dp"
+
+                    android:fontFamily="@font/nunito_regular"
+                    android:hint="@string/weight"
+                    android:inputType="number"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+
+                    android:textSize="21sp"
+                    android:importantForAutofill="no"
+                    tools:ignore="TextContrastCheck" />
+
+                <EditText
+                    android:id="@+id/height_quiz_ETXT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+
+                    android:drawableEnd="@drawable/ic_cm"
+                    android:drawablePadding="5dp"
+
+                    android:hint="@string/height"
+                    android:inputType="number"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+                    android:fontFamily="@font/nunito_regular"
+
+                    android:textSize="21sp"
+                    android:importantForAutofill="no"
+                    tools:ignore="TextContrastCheck" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/plan_quiz_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_style"
+                android:checkedButton="@+id/maintain_quiz_SWT"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/lose_quiz_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+                    android:tag="Lose Weight"
+                    android:gravity="center"
+                    android:text="@string/lose_nweight"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingVertical="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/maintain_quiz_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+                    android:tag="Maintain Weight"
+
+                    android:gravity="center"
+                    android:text="@string/maintain_nweight"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingVertical="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/gain_quiz_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+                    android:tag="Gain Weight"
+
+                    android:gravity="center"
+                    android:text="@string/gain_nweight"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:paddingVertical="5dp"/>
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/exercise_quiz_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_style"
+                android:checkedButton="@+id/moderateExe_quiz_SWT"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/noExe_quiz_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+                    android:tag="No Exercise\n0 per week"
+
+                    android:gravity="center"
+                    android:text="@string/no_exercise_n0_per_week"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:paddingVertical="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/moderateExe_quiz_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+                    android:tag="Moderate\n~3 per week"
+
+                    android:gravity="center"
+                    android:text="@string/moderate_n_3_per_week"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:paddingVertical="5dp"/>
+
+                <RadioButton
+                    android:id="@+id/highExe_quiz_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+                    android:tag="High\n~5 per week"
+
+                    android:gravity="center"
+                    android:text="@string/high_n_5_per_week"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:paddingVertical="5dp" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/continue_quiz_BTN"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/ic_arrow_forward_available"
+                android:background="@drawable/toggle_a"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

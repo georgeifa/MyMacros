@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.StatsFragment"
+    android:background="@color/blue">
+
+    <RadioGroup
+        android:id="@+id/chart_stats_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_style"
+        android:checkedButton="@+id/overview_stats_SWT"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/overview_stats_SWT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_bg"
+            android:button="@null"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="center"
+            android:text="@string/macros"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/calories_stats_SWT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_bg"
+            android:button="@null"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="center"
+            android:text="@string/calories"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/weight_set_SWT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_bg"
+            android:button="@null"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="center"
+            android:text="@string/weight"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/time_stats_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_style"
+        android:checkedButton="@+id/week_stats_SWT"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart_stats_toggle">
+
+        <RadioButton
+            android:id="@+id/week_stats_SWT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_bg"
+            android:button="@null"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="center"
+            android:text="@string/week"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/month_stats_SWT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_bg"
+            android:button="@null"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="center"
+            android:text="@string/_1_month"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/three_month_set_SWT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_bg"
+            android:button="@null"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="center"
+            android:text="@string/_3_months"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/frame_stats_FLAY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+
+
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_stats_toggle"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/chartReady_stats_PB"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        android:indeterminateTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/frame_stats_FLAY"
+        app:layout_constraintEnd_toEndOf="@+id/frame_stats_FLAY"
+        app:layout_constraintStart_toStartOf="@+id/frame_stats_FLAY"
+        app:layout_constraintTop_toTopOf="@+id/frame_stats_FLAY" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

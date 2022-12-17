@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:paddingVertical="16dp"
+
+    android:background="@drawable/general_frame_bg">
+
+    <ImageView
+        android:id="@+id/goal_status_goalsVH_IMG"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_goal"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/goal_goalsVH_TXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/goals"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/goal_status_goalsVH_IMG"
+        app:layout_constraintEnd_toStartOf="@+id/delete_goal_goalsVH_BTN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/goal_status_goalsVH_IMG"
+        app:layout_constraintTop_toTopOf="@+id/goal_status_goalsVH_IMG" />
+
+    <ImageView
+        android:id="@+id/delete_goal_goalsVH_BTN"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/goal_status_goalsVH_IMG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/goal_status_goalsVH_IMG"
+        app:srcCompat="@drawable/ic_remove"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

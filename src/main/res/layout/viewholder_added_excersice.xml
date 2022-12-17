@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/general_frame_bg"
+    android:paddingHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:paddingVertical="10dp"
+    android:id="@+id/food_bg">
+
+
+    <TextView
+        android:id="@+id/title_exc_viewH_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Push ups"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rep_num_exc_TXT"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/_180"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/title_exc_viewH_TXT"
+        app:layout_constraintTop_toBottomOf="@+id/title_exc_viewH_TXT" />
+
+    <TextView
+        android:id="@+id/textView22_exc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/reps"
+        android:textColor="#A8A8A8"
+
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rep_num_exc_TXT"
+        app:layout_constraintStart_toEndOf="@+id/rep_num_exc_TXT"
+        app:layout_constraintTop_toTopOf="@+id/rep_num_exc_TXT" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="/"
+        android:textColor="#A8A8A8"
+        android:fontFamily="@font/nunito_bold"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView22_exc"
+        app:layout_constraintStart_toEndOf="@+id/textView22_exc"
+        app:layout_constraintTop_toTopOf="@+id/textView22_exc" />
+
+    <TextView
+        android:id="@+id/kcal_burnt_exc_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/_60"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/title_exc_viewH_TXT"
+        app:layout_constraintTop_toBottomOf="@+id/rep_num_exc_TXT" />
+
+    <TextView
+        android:id="@+id/set_num_exc_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/_60"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rep_num_exc_TXT"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/rep_num_exc_TXT" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="sets"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rep_num_exc_TXT"
+        app:layout_constraintStart_toEndOf="@+id/set_num_exc_TXT"
+        app:layout_constraintTop_toTopOf="@+id/rep_num_exc_TXT" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/kcal"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kcal_burnt_exc_TXT"
+        app:layout_constraintStart_toEndOf="@+id/kcal_burnt_exc_TXT"
+        app:layout_constraintTop_toTopOf="@+id/kcal_burnt_exc_TXT" />
+
+    <ImageView
+        android:id="@+id/remove_exc_viewH_BTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_remove" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AccountFragment"
+    android:background="@color/blue">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:elevation="12dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profile_acc_IMG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@tools:sample/avatars"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/username_acc_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+
+            android:text="Georgeifa"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito_bold"
+            app:layout_constraintStart_toEndOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/fullname_acc_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/nunito_italic"
+            android:text="George Ifantis"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/username_acc_TXT"
+            app:layout_constraintTop_toBottomOf="@+id/username_acc_TXT" />
+
+        <TextView
+            android:id="@+id/email_acc_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:text="georgeifa13@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/username_acc_TXT"
+            app:layout_constraintTop_toBottomOf="@+id/fullname_acc_TXT" />
+
+        <ImageView
+            android:id="@+id/settings_acc_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_setting"
+            app:layout_constraintBottom_toBottomOf="@+id/username_acc_TXT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/username_acc_TXT"
+            app:layout_constraintTop_toTopOf="@+id/username_acc_TXT"
+            tools:ignore="ContentDescription" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="@string/account_details"
+                    android:textColor="@color/green"
+                    android:textSize="30sp"/>
+
+                <EditText
+                    android:id="@+id/username_acc_ETXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="40dp"
+
+                    android:background="@drawable/edit_text_style"
+
+                    android:singleLine="true"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="10dp"
+                    android:elevation="3dp"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:hint="@string/username"
+
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:paddingVertical="10dp"
+
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/email_acc_ETXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="40dp"
+
+                    android:background="@drawable/edit_text_style"
+
+                    android:singleLine="true"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:elevation="3dp"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:hint="@string/email"
+
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:paddingVertical="10dp"
+
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/password_acc_ETXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="40dp"
+
+                    android:elevation="3dp"
+
+                    android:singleLine="true"
+                    android:background="@drawable/edit_text_style"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:drawableEnd="@drawable/ic_show_password"
+
+                    android:hint="@string/password"
+
+                    android:inputType="textPassword"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="15dp"
+
+                    android:paddingEnd="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C6CCC6"
+                    android:textSize="22sp"
+
+                    android:importantForAutofill="no" />
+
+
+                <LinearLayout
+                    android:id="@+id/acd_account_LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/save_changes_acc_BTN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:paddingVertical="10dp"
+                        android:text="@string/save"
+                        android:textSize="20sp"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:background="@drawable/edit_text_style"/>
+
+                    <TextView
+                        android:id="@+id/cancel_changes_acc_BTN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:paddingVertical="10dp"
+
+                        android:text="@string/cancel"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="@color/red"
+                        android:background="@drawable/btn_idle_bg_red_style"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="@string/personal_details"
+                    android:textColor="@color/green"
+                    android:textSize="30sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="24dp"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/firstname_acc_ETXT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+
+                        android:fontFamily="@font/nunito_regular"
+                        android:hint="@string/first_name"
+                        android:inputType="textPersonName"
+                        android:paddingVertical="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#C6CCC6"
+
+                        android:textSize="21sp"
+                        tools:ignore="TextContrastCheck"
+                        android:importantForAutofill="no" />
+
+                    <EditText
+                        android:id="@+id/lastname_acc_ETXT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+
+                        android:hint="@string/last_name"
+                        android:inputType="textPersonName"
+                        android:paddingVertical="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#C6CCC6"
+                        android:fontFamily="@font/nunito_regular"
+
+                        android:textSize="21sp"
+                        android:importantForAutofill="no"
+                        tools:ignore="TextContrastCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/gender_acc_toggle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edit_text_style"
+                        android:checkedButton="@+id/male_acc_SWT"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/male_acc_SWT"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/toggle_widget_bg"
+                            android:button="@null"
+                            android:fontFamily="@font/nunito_bold"
+                            android:tag="Male"
+
+                            android:gravity="center"
+                            android:text="@string/male"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/female_acc_SWT"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/toggle_widget_bg"
+                            android:button="@null"
+                            android:fontFamily="@font/nunito_bold"
+                            android:tag="Female"
+
+                            android:gravity="center"
+                            android:text="@string/female"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/age_acc_ETXT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="@string/age"
+                        android:inputType="number"
+                        android:paddingVertical="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#C6CCC6"
+                        android:fontFamily="@font/nunito_regular"
+
+                        android:textSize="21sp"
+                        android:importantForAutofill="no"
+                        tools:ignore="TextContrastCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/weight_acc_ETXT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:drawableEnd="@drawable/ic_kg"
+                        android:drawablePadding="5dp"
+
+                        android:fontFamily="@font/nunito_regular"
+                        android:hint="@string/weight"
+                        android:inputType="number"
+                        android:paddingVertical="5dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#C6CCC6"
+
+                        android:textSize="21sp"
+                        android:importantForAutofill="no"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/height_acc_ETXT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+
+                        android:drawableEnd="@drawable/ic_cm"
+                        android:drawablePadding="5dp"
+
+                        android:hint="@string/height"
+                        android:inputType="number"
+                        android:paddingVertical="5dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#C6CCC6"
+                        android:fontFamily="@font/nunito_regular"
+
+                        android:textSize="21sp"
+                        android:importantForAutofill="no"
+                        tools:ignore="TextContrastCheck" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/plan_acc_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:checkedButton="@+id/maintain_acc_SWT"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/lose_acc_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="Lose Weight"
+
+                        android:gravity="center"
+                        android:text="@string/lose_nweight"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:paddingVertical="5dp"/>
+
+                    <RadioButton
+                        android:id="@+id/maintain_acc_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="Maintain Weight"
+
+                        android:gravity="center"
+                        android:text="@string/maintain_nweight"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:paddingVertical="5dp"/>
+
+                    <RadioButton
+                        android:id="@+id/gain_acc_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="Gain Weight"
+
+                        android:gravity="center"
+                        android:text="@string/gain_nweight"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:paddingVertical="5dp"/>
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/exercise_acc_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:checkedButton="@+id/moderateExe_acc_SWT"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/noExe_acc_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="No Exercise\n0 per week"
+
+                        android:gravity="center"
+                        android:text="@string/no_exercise_n0_per_week"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:paddingVertical="5dp"/>
+
+                    <RadioButton
+                        android:id="@+id/moderateExe_acc_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="Moderate\n~3 per week"
+
+                        android:gravity="center"
+                        android:text="@string/moderate_n_3_per_week"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:paddingVertical="5dp"/>
+
+                    <RadioButton
+                        android:id="@+id/highExe_acc_SWT"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_bg"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:tag="High\n~5 per week"
+
+                        android:gravity="center"
+                        android:text="@string/high_n_5_per_week"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:paddingVertical="5dp" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/pd_account_LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/save_changes_per_acc_BTN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:paddingVertical="10dp"
+                        android:text="@string/save"
+                        android:textSize="20sp"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:background="@drawable/edit_text_style"/>
+
+                    <TextView
+                        android:id="@+id/cancel_changes_per_acc_BTN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:paddingVertical="10dp"
+
+                        android:text="@string/cancel"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="@color/red"
+                        android:background="@drawable/btn_idle_bg_red_style"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

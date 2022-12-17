@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="8dp"
+    android:background="@drawable/general_frame_bg"
+    android:paddingHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:paddingVertical="10dp">
+
+    <ImageView
+        android:id="@+id/action_pic_diary_PIC"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title_action_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/add_exercise"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/action_pic_diary_PIC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/recommended"
+        android:textColor="#AEABAB"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/title_action_TXT"
+        app:layout_constraintTop_toBottomOf="@+id/title_action_TXT" />
+
+    <TextView
+        android:id="@+id/min_action_diary_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/_60"
+        android:textColor="#AEABAB"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16_action"
+        app:layout_constraintStart_toEndOf="@+id/textView16_action"
+        app:layout_constraintTop_toTopOf="@+id/textView16_action" />
+
+    <TextView
+        android:id="@+id/textView17_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="-"
+        android:textColor="#AEABAB"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16_action"
+        app:layout_constraintStart_toEndOf="@+id/min_action_diary_TXT"
+        app:layout_constraintTop_toTopOf="@+id/textView16_action"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/max_action_diary_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/_1000"
+        android:textColor="#AEABAB"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16_action"
+        app:layout_constraintStart_toEndOf="@+id/textView17_action"
+        app:layout_constraintTop_toTopOf="@+id/textView16_action" />
+
+    <TextView
+        android:id="@+id/symbol_action_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="32dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/min"
+        android:textColor="#AEABAB"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16_action"
+        app:layout_constraintEnd_toStartOf="@+id/add_action_diary_BTN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/max_action_diary_TXT"
+        app:layout_constraintTop_toTopOf="@+id/textView16_action" />
+
+    <ImageView
+        android:id="@+id/add_action_diary_BTN"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_add_bg"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

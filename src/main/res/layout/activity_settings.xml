@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SettingsActivity"
+    android:background="@color/blue">
+
+
+    <ImageButton
+        android:id="@+id/back_setting_BTN"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textSize="40sp"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/back_setting_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_setting_BTN"
+        app:layout_constraintTop_toTopOf="@+id/back_setting_BTN" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_setting_BTN">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/lang_set_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="2"
+                android:background="@drawable/edit_text_style"
+                android:checkedButton="@+id/english_set_SWT"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/greek_set_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:gravity="center"
+                    android:text="@string/greek"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/english_set_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:gravity="center"
+                    android:text="@string/english"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/notification_set_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="2"
+                android:background="@drawable/edit_text_style"
+                android:checkedButton="@+id/not_on_set_SWT"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/not_on_set_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:gravity="center"
+                    android:text="@string/notifications_on"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/not_off_set_SWT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_bg"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:gravity="center"
+                    android:text="@string/notifications_off"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/not_en_set_TXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/notifications_are_enabled"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito_italic"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/app_lock_settings_BTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+
+                android:textColor="@color/white"
+                android:background="@drawable/edit_text_style"
+                android:layout_weight="1"
+                android:text="@string/app_lock"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/app_lock_en_set_TXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/app_lock_is_enabled"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito_italic"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/logout_settings_BTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_idle_bg_red_style"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="@string/log_out"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
